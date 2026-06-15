@@ -1,0 +1,103 @@
+import { 
+  Zap, 
+  Sun, 
+  Car, 
+  TrendingDown, 
+  Plane, 
+  Utensils, 
+  Trash2, 
+  ShoppingBag 
+} from 'lucide-react';
+import { CalculatorState, Pledge } from './types';
+
+export const DEFAULT_STATE: CalculatorState = {
+  electricity: 480,
+  gas: 35,
+  hasSolarOn: false,
+  greenEnergyPlan: false,
+  carMiles: 160,
+  carType: 'gas',
+  transitMiles: 30,
+  shortFlights: 2,
+  mediumFlights: 1,
+  longFlights: 0,
+  dietType: 'average-meat',
+  localFood: 25,
+  foodWaste: 15,
+  shoppingType: 'moderate',
+  wasteBins: 2,
+  recycling: {
+    paper: true,
+    plastic: true,
+    glass: false,
+    metal: false,
+  },
+  waterHabits: 'moderate',
+};
+
+export const PLEDGES_DATA: Pledge[] = [
+  {
+    id: 'led',
+    title: 'Switch to 100% LED Bulbs',
+    description: 'Reduces energy usage in lighting by over 75%.',
+    category: 'energy',
+    saving: 0.32,
+    icon: Zap,
+  },
+  {
+    id: 'solar',
+    title: 'Install Rooftop Solar Panels',
+    description: 'Generates clean, local solar electricity for your home.',
+    category: 'energy',
+    saving: 1.45,
+    icon: Sun,
+  },
+  {
+    id: 'ev',
+    title: 'Upgrade to Electric Vehicle',
+    description: 'Cuts petroleum transport footprint down to grid electricity standards.',
+    category: 'transport',
+    saving: 1.80,
+    icon: Car,
+  },
+  {
+    id: 'carpool',
+    title: 'Carpool or Telecommute (2 days/wk)',
+    description: 'Reduces driving fuel emissions by 40%.',
+    category: 'transport',
+    saving: 0.75,
+    icon: TrendingDown,
+  },
+  {
+    id: 'flight',
+    title: 'Reduce 1 Long-haul Flight',
+    description: 'Avoid a cross-continental flight, opting for virtual or local transit.',
+    category: 'transport',
+    saving: 1.20,
+    icon: Plane,
+  },
+  {
+    id: 'meat',
+    title: 'Meat-free Days (3 days/wk)',
+    description: 'Transitioning some meals to local vegetarian dishes.',
+    category: 'food',
+    saving: 0.55,
+    icon: Utensils,
+  },
+  {
+    id: 'compost',
+    title: 'Compost Organic Kitchen Waste',
+    description: 'Prevents food from decaying anaerobically into methane in landfills.',
+    category: 'waste',
+    saving: 0.28,
+    icon: Trash2,
+  },
+  {
+    id: 'thrift',
+    title: 'Second-hand / Buy Less (Shopping Habit)',
+    description: 'Opt for durable, thrifted goods and reduce fast fashion demand.',
+    category: 'lifestyle',
+    saving: 0.50,
+    icon: ShoppingBag,
+  },
+];
